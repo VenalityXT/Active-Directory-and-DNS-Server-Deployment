@@ -23,7 +23,7 @@ To deploy a functional **Active Directory domain controller** with integrated **
 After logging into Windows Server 2022, open **Server Manager**.  
 From the **Dashboard**, select **“Add roles and features.”**
 
-[Insert Image – Server Manager Dashboard]
+<img width="1599" height="810" alt="image" src="https://github.com/user-attachments/assets/58be3916-6925-43e3-8db5-a51c6a3d9419" />
 
 This launches the **Add Roles and Features Wizard**, which is used to add or configure core Windows Server components.
 
@@ -33,7 +33,7 @@ This launches the **Add Roles and Features Wizard**, which is used to add or con
 Choose **“Role-based or feature-based installation.”**  
 This option allows you to install AD DS and DNS roles directly onto this server.
 
-[Insert Image – Installation Type Selection]
+<img width="784" height="558" alt="image" src="https://github.com/user-attachments/assets/b741298a-9bd1-41da-9c47-166435fc4b95" />
 
 ---
 
@@ -41,7 +41,7 @@ This option allows you to install AD DS and DNS roles directly onto this server.
 Select **“This server from the server pool”** to apply changes locally.  
 Your server should appear with its IP address and Windows version listed.
 
-[Insert Image – Server Selection]
+<img width="784" height="558" alt="image" src="https://github.com/user-attachments/assets/6c15d4e1-4c87-406c-8ee8-2bead6a04dc5" />
 
 ---
 
@@ -54,7 +54,7 @@ You may see a validation message warning about the absence of a static IP addres
 AD DS and DNS require a fixed IP to prevent future connectivity issues.  
 Continue to the next step to fix this.
 
-[Insert Image – Validation Warning]
+<img width="782" height="558" alt="image" src="https://github.com/user-attachments/assets/32a392a4-937e-4594-84bb-ca6ee76583ae" />
 
 ---
 
@@ -69,7 +69,7 @@ Select **“Use the following IP address”** and configure it manually:
 
 This ensures the server maintains a consistent network identity and can reliably act as its own DNS authority.
 
-[Insert Image – IPv4 Static Configuration]
+<img width="1599" height="496" alt="image" src="https://github.com/user-attachments/assets/b45296f8-1a08-4a96-b50f-1f3a43698ca4" />
 
 ---
 
@@ -78,7 +78,7 @@ On the **Confirmation** page, review your selected roles.
 Ensure both AD DS and DNS Server are listed, then click **Install**.  
 Optionally, select **“Restart the destination server automatically if required.”**
 
-[Insert Image – Installation Confirmation]
+<img width="1599" height="824" alt="image" src="https://github.com/user-attachments/assets/5a798baa-94b7-4c79-89e1-e63db29b3f87" />
 
 After installation, you’ll receive a post-deployment notification prompting to “Promote this server to a domain controller.”
 
@@ -88,11 +88,11 @@ After installation, you’ll receive a post-deployment notification prompting to
 Select **“Promote this server to a domain controller.”**  
 In the **Deployment Configuration** window, choose **“Add a new forest”** and specify the root domain name:
 
-X
+```
 rapidascent.local
-X
+```
 
-[Insert Image – Domain Configuration]
+<img width="783" height="557" alt="image" src="https://github.com/user-attachments/assets/c18ed309-bb9c-4003-9696-743f271f54d7" />
 
 This creates a new Active Directory forest — a hierarchical structure that contains the domain and all its objects.
 
@@ -107,7 +107,7 @@ Keep default settings:
 Enter a **Directory Services Restore Mode (DSRM)** password.  
 This is used for system recovery and should be securely stored.
 
-[Insert Image – Domain Controller Options]
+<img width="1599" height="757" alt="image" src="https://github.com/user-attachments/assets/47de928a-e858-4cff-88b6-361337d0a30b" />
 
 ---
 
@@ -117,7 +117,7 @@ Warnings about legacy cryptography or DNS delegation can be ignored in standalon
 Once validation passes, click **Install** to promote the server.  
 The system will automatically reboot when complete.
 
-[Insert Image – Prerequisites Check]
+<img width="758" height="558" alt="image" src="https://github.com/user-attachments/assets/7d334b33-387f-4cc4-a86e-7396957de437" />
 
 ---
 
@@ -127,25 +127,25 @@ You should now see:
 - **Active Directory Domain Services**
 - **DNS Server**
 
-[Insert Image – Installed Roles]
+<img width="1336" height="308" alt="image" src="https://github.com/user-attachments/assets/e4562e99-9140-48c3-b755-18260ceb2bee" />
 
 Open **Active Directory Users and Computers (ADUC)** and **DNS Manager** to confirm both services are active.  
 ADUC should show your domain (`rapidascent.local`) and DNS Manager should display matching forward lookup zones.
 
-[Insert Image – ADUC and DNS Manager]
+<img width="964" height="525" alt="image" src="https://github.com/user-attachments/assets/bd64d134-b991-497a-a498-6100762fd2fe" />
 
 ---
 
 ## **Step 11: Test Name Resolution**
 Open PowerShell and test name resolution:
-X
+```
 nslookup rapidascent.local
 ping rapidascent.local
-X
+```
 
 A successful lookup and reply confirm DNS and AD integration are functioning properly.
 
-[Insert Image – nslookup and Ping Verification]
+<img width="500" height="511" alt="image" src="https://github.com/user-attachments/assets/73617cd7-fb84-4b59-b86e-6fae211f8a10" />
 
 ---
 
@@ -160,8 +160,12 @@ In **Active Directory Users and Computers**:
 
 This demonstrates Active Directory object creation and management within an organizational structure.
 
-[Insert Image – New OU and User Creation]  
-[Insert Image – IT_Department OU with John Doe User]
+<img width="570" height="528" alt="image" src="https://github.com/user-attachments/assets/aadd6db3-7601-4a55-9cda-5d3f50b6db6b" />
+
+<img width="570" height="528" alt="image" src="https://github.com/user-attachments/assets/f4e52eb6-68d8-44ae-a27b-7e8cac60eb0f" />
+
+<img width="571" height="529" alt="image" src="https://github.com/user-attachments/assets/2e1f49cf-f964-4ae5-8c3b-3d9619afa12a" />
+
 
 ---
 
@@ -170,7 +174,7 @@ Return to **Server Manager → Local Server → Events** and check for critical 
 Kernel power messages are normal from reboots during role installation.  
 If no persistent DNS or AD errors appear, the deployment is stable.
 
-[Insert Image – Event Viewer Review]
+<img width="965" height="571" alt="image" src="https://github.com/user-attachments/assets/b53e8ff3-9713-4ace-9cce-f037f5640583" />
 
 ---
 
@@ -182,44 +186,3 @@ The configuration provides a foundation for adding domain-joined clients, managi
 By verifying DNS resolution, ADUC structure, and event logs, this lab confirms a complete and operational Active Directory environment suitable for future network simulations or SOC-related exercises.
 
 ---
-
-
----
-
-
-<img width="1599" height="810" alt="image" src="https://github.com/user-attachments/assets/eea8cbc8-7126-472e-860a-195bf25cd0f4" />
-
-<img width="784" height="558" alt="image" src="https://github.com/user-attachments/assets/60711616-ca8c-4121-9081-88f9c701ba0a" />
-
-<img width="784" height="558" alt="image" src="https://github.com/user-attachments/assets/8114e281-6ea0-4d9f-9b13-f538603fed1e" />
-
-<img width="782" height="558" alt="image" src="https://github.com/user-attachments/assets/7793abab-64fa-4b60-87c1-089168d7489b" />
-
-<img width="1599" height="496" alt="image" src="https://github.com/user-attachments/assets/33a37032-1067-4172-b7fa-6d2ea2ca5343" />
-
-<img width="1599" height="824" alt="image" src="https://github.com/user-attachments/assets/85349153-4645-41aa-9e83-85f3a460fd06" />
-
-<img width="783" height="557" alt="image" src="https://github.com/user-attachments/assets/9b732ed2-2351-4ac0-b9ea-14c674c78914" />
-
-<img width="1599" height="757" alt="image" src="https://github.com/user-attachments/assets/8ae39887-8e73-4334-91f5-5ad94dbf1d5b" />
-
-<img width="758" height="558" alt="image" src="https://github.com/user-attachments/assets/73c924b9-0c6f-421a-9d1d-c4464cb94e97" />
-
-<img width="759" height="557" alt="image" src="https://github.com/user-attachments/assets/4919770d-1db9-4d96-bfd5-b300b9ddd59b" />
-
-<img width="758" height="557" alt="image" src="https://github.com/user-attachments/assets/bbd5e58c-7acf-4b2c-9866-c37d8e0b8212" />
-
-<img width="1336" height="308" alt="image" src="https://github.com/user-attachments/assets/1c2aa41b-d9c9-455b-87ea-d6d239f011f6" />
-
-<img width="964" height="525" alt="image" src="https://github.com/user-attachments/assets/d9c33b29-858d-48a1-b8a9-64a3d1c2ca4e" />
-
-<img width="500" height="511" alt="image" src="https://github.com/user-attachments/assets/ac7e2759-7c1e-4728-a3d7-7e528b28b01f" />
-
-<img width="570" height="528" alt="image" src="https://github.com/user-attachments/assets/2117a153-44da-4276-b013-8f370644a410" />
-
-<img width="570" height="528" alt="image" src="https://github.com/user-attachments/assets/3f99e553-962f-4e87-bb7d-eaec0d1b4559" />
-
-<img width="571" height="529" alt="image" src="https://github.com/user-attachments/assets/cf6a89fc-1b87-44cc-9ae4-2b4c0c486ee7" />
-
-<img width="965" height="571" alt="image" src="https://github.com/user-attachments/assets/e63f9ea7-cd85-4833-abdd-b1cd2a6561d9" />
-
