@@ -147,11 +147,11 @@ Next, specify the **root domain name** for the forest. In this case, we will use
 rapidascent.local
 ```
 
+<img width="758" height="558" alt="image" src="https://github.com/user-attachments/assets/4a871896-aabd-4581-9c93-3b1a21a8fec2" />
+
 > The root domain name forms the foundation of the forest. It is the highest-level domain in your Active Directory structure and will be used to identify the domain in your network.
 
 Click **Next** and proceed with the wizard’s steps to complete the configuration.
-
-<img width="758" height="558" alt="image" src="https://github.com/user-attachments/assets/4a871896-aabd-4581-9c93-3b1a21a8fec2" />
 
 By promoting the server, you are creating a **new Active Directory forest**. A forest is a hierarchical structure that houses the domain and all its objects, such as users, computers, and group policies.
 
