@@ -34,16 +34,16 @@ By completing this configuration, users gain practical experience in **domain cr
 
 The **Server Manager** console is the primary interface for managing Windows Server roles and features. It provides administrators with a centralized environment to configure core services such as **Active Directory Domain Services (AD DS)**, **DNS**, and **File Services**.
 
-After logging into the **Windows Server 2022 VM**, follow these steps to begin the role installation:
+We'll start with opening **Server Manager** from the Start Menu or taskbar. From the **Dashboard**, we'll select **Add roles and features**. This begins the process for installing and configuring the necessary roles, specifically **Active Directory Domain Services (AD DS)** and **DNS Server**, to set up a domain infrastructure.
 
 - Open **Server Manager** from the Start Menu or taskbar.  
 - From the **Dashboard**, select **Add roles and features**.  
-  This initiates the process to install and configure the roles required for your domain infrastructure, which will include **Active Directory Domain Services (AD DS)** and **DNS Server**.
+  This opens the installation wizard to configure the roles required for your domain environment.
 
 <img width="1599" height="810" alt="image" src="https://github.com/user-attachments/assets/58be3916-6925-43e3-8db5-a51c6a3d9419" />
 
-The **Add Roles and Features Wizard** guides the installation of essential server roles.  
-This step is the foundation for enabling **AD DS** for domain management and **DNS** for name resolution, both critical for setting up a functional domain environment.
+The **Add Roles and Features Wizard** provides a structured method for adding core server roles.  
+At this stage, we’ll be enabling **AD DS** for domain management and **DNS** for name resolution, both of which are essential for setting up and maintaining a functional domain.
 
 ---
 
