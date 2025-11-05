@@ -218,6 +218,7 @@ ping rapidascent.local
 ```
 
 A successful **nslookup** should return the server’s IP address, and **ping** should successfully reach the domain. This confirms that DNS and AD integration are functioning correctly.
+
 <img width="500" height="511" alt="image" src="https://github.com/user-attachments/assets/a3f58c3c-9c7c-4e7c-b75b-5bbad57ceeb8" />
 
 If **nslookup** shows a timeout or error, it’s usually not a concern at this stage. This can occur if the DNS server is still processing or if temporary network delays or firewalls interfere with the request. The important thing is that **ping** works, indicating DNS is properly resolving the domain.
