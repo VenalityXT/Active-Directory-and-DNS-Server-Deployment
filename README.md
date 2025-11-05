@@ -80,7 +80,7 @@ On the **Confirmation** page, review your selected roles.
 Ensure both AD DS and DNS Server are listed, then click **Install**.  
 Optionally, select **“Restart the destination server automatically if required.”**
 
-<img width="1599" height="824" alt="image" src="https://github.com/user-attachments/assets/5a798baa-94b7-4c79-89e1-e63db29b3f87" />
+<img width="783" height="557" alt="image" src="https://github.com/user-attachments/assets/aeae904c-03ef-4d24-9f42-f80d072b5ae1" />
 
 After installation, you’ll receive a post-deployment notification prompting to “Promote this server to a domain controller.”
 
@@ -94,7 +94,9 @@ In the **Deployment Configuration** window, choose **“Add a new forest”** an
 rapidascent.local
 ```
 
-<img width="783" height="557" alt="image" src="https://github.com/user-attachments/assets/c18ed309-bb9c-4003-9696-743f271f54d7" />
+<img width="1599" height="757" alt="image" src="https://github.com/user-attachments/assets/88cdcb98-e5cd-4c45-8582-7e3533dbc93c" />
+
+<img width="758" height="558" alt="image" src="https://github.com/user-attachments/assets/4a871896-aabd-4581-9c93-3b1a21a8fec2" />
 
 This creates a new Active Directory forest — a hierarchical structure that contains the domain and all its objects.
 
@@ -109,7 +111,7 @@ Keep default settings:
 Enter a **Directory Services Restore Mode (DSRM)** password.  
 This is used for system recovery and should be securely stored.
 
-<img width="1599" height="757" alt="image" src="https://github.com/user-attachments/assets/47de928a-e858-4cff-88b6-361337d0a30b" />
+<img width="759" height="557" alt="image" src="https://github.com/user-attachments/assets/d92a1e4d-f555-4ba4-a380-0a07a89b7f06" />
 
 ---
 
@@ -119,7 +121,7 @@ Warnings about legacy cryptography or DNS delegation can be ignored in standalon
 Once validation passes, click **Install** to promote the server.  
 The system will automatically reboot when complete.
 
-<img width="758" height="558" alt="image" src="https://github.com/user-attachments/assets/7d334b33-387f-4cc4-a86e-7396957de437" />
+<img width="758" height="557" alt="image" src="https://github.com/user-attachments/assets/8243a149-0413-443e-ad2f-dc4209c0acc7" />
 
 ---
 
