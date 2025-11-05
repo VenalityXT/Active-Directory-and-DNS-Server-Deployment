@@ -69,37 +69,49 @@ Your server should appear in the list with its IP address and Windows version sh
 
 <img width="784" height="558" alt="image" src="https://github.com/user-attachments/assets/6c15d4e1-4c87-406c-8ee8-2bead6a04dc5" />
 
-> By selecting **"This server from the server pool"**, you're ensuring that the roles will be installed on the local server, rather than another machine in the network. This step confirms you're working on the right server for your domain setup.
+> By selecting **"This server from the server pool"**, you're ensuring that the roles will be installed on the local server, rather than another machine in the network.
 
 ---
 
-## **Step 4: Install AD DS and DNS Roles**
+### Step 4: Install AD DS and DNS Roles
+
 In the **Server Roles** list, check the boxes for:
-- **Active Directory Domain Services**  
+- **Active Directory Domain Services (AD DS)**  
 - **DNS Server**
 
-You may see a validation message warning about the absence of a static IP address.  
-AD DS and DNS require a fixed IP to prevent future connectivity issues.  
-Continue to the next step to fix this.
+These roles are essential for setting up your domain controller and ensuring internal name resolution for your network.
+
+You may see a validation message about the absence of a static IP address.  
+Since **AD DS** and **DNS** require a fixed IP to function properly, you'll need to resolve this before continuing.
 
 <img width="782" height="558" alt="image" src="https://github.com/user-attachments/assets/32a392a4-937e-4594-84bb-ca6ee76583ae" />
 
+> **Note:** If you see the static IP warning, don't worry—this is a reminder that a domain controller needs a consistent network identity. We'll address this in **Step 5** by configuring a static IP for the server.
+
 ---
 
-## **Step 5: Configure a Static IP Address**
-Before continuing, open **Network Connections** → Right-click your Ethernet adapter → **Properties** → **Internet Protocol Version 4 (TCP/IPv4)** → **Properties**.  
-Select **“Use the following IP address”** and configure it manually:
+### Step 5: Configure a Static IP Address
+
+Before continuing with the role installation, it’s essential to configure a **static IP address** for the server. This ensures that the server maintains a consistent network identity and can reliably act as its own DNS authority.
+
+To set a static IP, follow these steps:
+1. Open **Network Connections** and right-click your **Ethernet adapter**.
+2. Select **Properties**, then click on **Internet Protocol Version 4 (TCP/IPv4)** and choose **Properties** again.
+3. Select **"Use the following IP address"** and enter the following settings:
+
 - **IP address:** 10.0.2.15  
 - **Subnet mask:** 255.255.255.0  
 - **Default gateway:** 10.0.2.15  
 - **Preferred DNS server:** 10.0.2.15  
 - **Alternate DNS server:** 8.8.8.8  
 
-This ensures the server maintains a consistent network identity and can reliably act as its own DNS authority.
+This configuration ensures that the server’s network identity remains fixed, and it can function properly as a domain controller with DNS capabilities.
 
 <img width="1599" height="496" alt="image" src="https://github.com/user-attachments/assets/b45296f8-1a08-4a96-b50f-1f3a43698ca4" />
 
 <img width="1599" height="824" alt="image" src="https://github.com/user-attachments/assets/d81ea652-7d49-4e40-8868-29943c719416" />
+
+> Configuring a static IP is critical for domain controllers because it ensures consistent network addressing, preventing future conflicts or disruptions that might arise from a dynamic IP address.
 
 ---
 
