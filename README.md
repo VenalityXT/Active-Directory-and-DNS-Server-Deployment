@@ -11,8 +11,8 @@
 
 ## **Project Overview**
 
-This project demonstrates how to **deploy, configure, and validate** an **Active Directory Domain Services (AD DS)** and **DNS Server** environment on **Windows Server 2022**.  
-The lab simulates an enterprise domain controller setup from start to finish — installing necessary roles, configuring static IP addressing, promoting the server to a domain controller, and validating functionality through DNS resolution and directory management.
+This project demonstrates how to **deploy, configure, and validate** an **Active Directory Domain Services (AD DS)** and **DNS Server** environment on a **Windows Server 2022** VM using VirtualBox.  
+The lab simulates an enterprise domain controller setup from start to finish; Installing necessary roles, configuring static IP addressing, promoting the server to a domain controller, and validating functionality through DNS resolution and directory management.
 
 The environment serves as a foundational exercise for **systems administrators and cybersecurity analysts** learning how identity and name resolution infrastructure functions within enterprise networks.  
 By completing this configuration, users gain practical experience in **domain creation, DNS zone management, and Active Directory structure organization**.
@@ -30,13 +30,18 @@ By completing this configuration, users gain practical experience in **domain cr
 
 ---
 
-## **Step 1: Open Server Manager**
-After logging into Windows Server 2022, open **Server Manager**.  
-From the **Dashboard**, select **“Add roles and features.”**
+## **Step 1: Access Server Manager**
+
+**Server Manager** is the central console for installing and managing Windows Server roles (e.g., **Active Directory Domain Services (AD DS)**, **DNS Server**, **File Services**) on the **Windows Server 2022 VM**.
+
+Open **Server Manager** from the Start Menu or taskbar.  
+From the **Dashboard**, select **Add roles and features**.
 
 <img width="1599" height="810" alt="image" src="https://github.com/user-attachments/assets/58be3916-6925-43e3-8db5-a51c6a3d9419" />
 
-This launches the **Add Roles and Features Wizard**, which is used to add or configure core Windows Server components.
+You’ll use the role installation wizard to deploy:
+- **AD DS** — centralized identity and access management.  
+- **DNS Server** — internal name resolution for domain services.
 
 ---
 
