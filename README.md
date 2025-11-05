@@ -30,20 +30,21 @@ By completing this configuration, users gain practical experience in **domain cr
 
 ---
 
-## **Step 1: Access Server Manager**
+## Step 1: Access Server Manager
 
-The **Server Manager** console is the primary interface for managing Windows Server roles and features. It provides administrators with a centralized environment to configure core services such as **Active Directory Domain Services (AD DS)**, **DNS**, and **File Services**.
+The Server Manager console is the central hub for managing server roles and features on Windows Server. It provides a unified interface for configuring services such as Active Directory Domain Services (AD DS) and DNS, which are essential for setting up a domain environment.
 
-We'll start with opening **Server Manager** from the Start Menu or taskbar. From the **Dashboard**, we'll select **Add roles and features**. This begins the process for installing and configuring the necessary roles, specifically **Active Directory Domain Services (AD DS)** and **DNS Server**, to set up a domain infrastructure.
+We'll start by opening Server Manager from the Start Menu or taskbar. From the Dashboard, select Add roles and features to begin the installation process.
 
-- Open **Server Manager** from the Start Menu or taskbar.  
-- From the **Dashboard**, select **Add roles and features**.  
-  This opens the installation wizard to configure the roles required for your domain environment.
+- Open Server Manager from the Start Menu or taskbar.  
+- From the Dashboard, select Add roles and features.  
+  This will open the wizard for installing roles, including Active Directory and DNS, which are critical for the domain infrastructure.
 
 <img width="1599" height="810" alt="image" src="https://github.com/user-attachments/assets/58be3916-6925-43e3-8db5-a51c6a3d9419" />
 
-The **Add Roles and Features Wizard** provides a structured method for adding core server roles.  
-At this stage, we’ll be enabling **AD DS** for domain management and **DNS** for name resolution, both of which are essential for setting up and maintaining a functional domain.
+The Add Roles and Features Wizard will guide the installation of core server components. At this stage, we are focused on enabling AD DS for domain management and DNS for name resolution, both of which are essential for a functional domain environment.
+
+> The Server Manager console is often the first place administrators go to configure roles and features after a fresh Windows Server installation, making it a key tool in system administration.
 
 ---
 
