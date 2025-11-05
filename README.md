@@ -212,14 +212,13 @@ ADUC should display your domain (`rapidascent.local`), and DNS Manager should sh
 
 To confirm DNS and AD integration, open **PowerShell** and run the following commands:
 
-X
+```powershell
 nslookup rapidascent.local
 ping rapidascent.local
-X
-
-<img width="500" height="511" alt="image" src="https://github.com/user-attachments/assets/a3f58c3c-9c7c-4e7c-b75b-5bbad57ceeb8" />
+```
 
 A successful **nslookup** should return the server’s IP address, and **ping** should successfully reach the domain. This confirms that DNS and AD integration are functioning correctly.
+<img width="500" height="511" alt="image" src="https://github.com/user-attachments/assets/a3f58c3c-9c7c-4e7c-b75b-5bbad57ceeb8" />
 
 If **nslookup** shows a timeout or error, it’s usually not a concern at this stage. This can occur if the DNS server is still processing or if temporary network delays or firewalls interfere with the request. The important thing is that **ping** works, indicating DNS is properly resolving the domain.
 
@@ -228,20 +227,26 @@ If **nslookup** shows a timeout or error, it’s usually not a concern at this s
 ### Step 12: Create an Organizational Unit (OU) and User
 
 In **Active Directory Users and Computers (ADUC)**:
-1. Right-click your domain → **New → Organizational Unit** → Name it `IT_Department`.  
-2. Inside the new OU, right-click → **New → User**.  
+1. Right-click your domain → **New → Organizational Unit** → Name it `IT_Department`.
+2. Inside the newly created OU, right-click → **New → User**.  
    - First Name: John  
    - Last Name: Doe  
    - User logon name: jdoe  
-3. Set a password and uncheck **“User must change password at next logon.”**
+3. Set a password and feel free to modify additional options as needed.
 
-This demonstrates creating and managing Active Directory objects like users and organizational units within a domain.
+This process demonstrates how to create **organizational units (OUs)** and **user accounts** in Active Directory. These are essential for organizing and managing resources and users in your domain environment.
 
 <img width="570" height="528" alt="image" src="https://github.com/user-attachments/assets/aadd6db3-7601-4a55-9cda-5d3f50b6db6b" />
 
+In this image, you can see the **Active Directory Users and Computers** (ADUC) interface, where we begin by creating a new **Organizational Unit (OU)**. This OU helps keep users organized into a specific department or category, making it easier to manage permissions and resources.
+
 <img width="570" height="528" alt="image" src="https://github.com/user-attachments/assets/f4e52eb6-68d8-44ae-a27b-7e8cac60eb0f" />
 
+Next, after the **OU** is created, we proceed by adding a **new user** within the OU. Here, you can see the user creation form with **John Doe**'s details entered. Setting up user accounts is essential for granting access to resources and managing permissions.
+
 <img width="571" height="529" alt="image" src="https://github.com/user-attachments/assets/2e1f49cf-f964-4ae5-8c3b-3d9619afa12a" />
+
+This final image shows the **completed user account** for John Doe, now successfully added to the **IT_Department OU**. Managing users within OUs allows for easier administration, especially as the network grows.
 
 ---
 
