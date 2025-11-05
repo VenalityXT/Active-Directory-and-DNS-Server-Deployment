@@ -238,24 +238,30 @@ This process demonstrates how to create **organizational units (OUs)** and **use
 
 <img width="570" height="528" alt="image" src="https://github.com/user-attachments/assets/aadd6db3-7601-4a55-9cda-5d3f50b6db6b" />
 
-In this image, you can see the **Active Directory Users and Computers** (ADUC) interface, where we begin by creating a new **Organizational Unit (OU)**. This OU helps keep users organized into a specific department or category, making it easier to manage permissions and resources.
+We can see the **Active Directory Users and Computers** (ADUC) interface, where we begin by creating a new **Organizational Unit (OU)**. This OU helps keep users organized into a specific department or category, making it easier to manage permissions and resources.
 
 <img width="570" height="528" alt="image" src="https://github.com/user-attachments/assets/f4e52eb6-68d8-44ae-a27b-7e8cac60eb0f" />
 
-Next, after the **OU** is created, we proceed by adding a **new user** within the OU. Here, you can see the user creation form with **John Doe**'s details entered. Setting up user accounts is essential for granting access to resources and managing permissions.
+After the **OU** is created, we proceed by adding a **new user** within the OU. Here, you can see the user creation form with **John Doe**'s details entered. Setting up user accounts is essential for granting access to resources and managing permissions.
 
 <img width="571" height="529" alt="image" src="https://github.com/user-attachments/assets/2e1f49cf-f964-4ae5-8c3b-3d9619afa12a" />
 
-This final image shows the **completed user account** for John Doe, now successfully added to the **IT_Department OU**. Managing users within OUs allows for easier administration, especially as the network grows.
+We can see the **completed user account** for John Doe, now successfully added to the **IT_Department OU**. Managing users within OUs allows for easier administration, especially as the network grows.
 
 ---
 
 ### Step 13: Review System Health
 
 Return to **Server Manager → Local Server → Events** and check for any critical or warning messages.  
-You may notice **Kernel Power** messages, which are expected due to reboots during role installation. As long as no persistent **DNS** or **AD** errors appear, the deployment is stable.
+You may notice **Kernel Power** messages, which are expected due to reboots during role installation. These messages are harmless and simply indicate the system was restarted as part of the configuration process.
+
+In our case, we saw a few warnings related to DNS and **Active Directory Domain Services (AD DS)**. However, these are not of concern, as they typically appear during the initial setup and usually resolve themselves once the roles and services are fully configured. 
+
+As long as there are no persistent errors related to **DNS** or **AD**, everything is functioning as expected, and the deployment is stable.
 
 <img width="965" height="571" alt="image" src="https://github.com/user-attachments/assets/b53e8ff3-9713-4ace-9cce-f037f5640583" />
+
+> If you continue to see warnings or critical errors after the system has fully rebooted and stabilized, it may be worth reviewing the event logs further or checking the DNS and AD configurations. But for now, as long as the DNS resolution and AD functionality tests (like `nslookup` and `ping`) succeed, you're all set.
 
 ---
 
