@@ -1,6 +1,6 @@
 # **Active Directory & DNS Server Deployment**
 
-[![OS](https://img.shields.io/badge/OS-Windows%20Server%202022-blue?logo=windows)](https://learn.microsoft.com/en-us/windows-server/)
+[![OS](https://img.shields.io/badge/OS-Windows%20Server%202022-blue?logo=windows)](https://learn.microsoft.com/en-us/windows-server/) 
 [![Service](https://img.shields.io/badge/Service-Active%20Directory-blue)](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview)
 [![Networking](https://img.shields.io/badge/Service-DNS-green)](https://learn.microsoft.com/en-us/windows-server/networking/dns/dns-top)
 [![Role Installation](https://img.shields.io/badge/Focus-Server%20Role%20Installation-orange)](https://learn.microsoft.com/en-us/windows-server/administration/server-manager/install-or-uninstall-roles-role-services-or-features)
