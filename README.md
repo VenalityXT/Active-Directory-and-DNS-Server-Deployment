@@ -11,7 +11,7 @@
 
 ## **Project Overview**
 
-This project demonstrates how to **deploy, configure, and validate** an **Active Directory Domain Services (AD DS)** and **DNS Server** environment on a **Windows Server 2022** VM using VirtualBox.  
+This project demonstrates how to **deploy, configure, and validate** an **Active Directory Domain Services (AD DS)** and **DNS Server** environment on a **Windows Server 2022** VM using VirtualBox.   
 The lab simulates an enterprise domain controller setup from start to finish; Installing necessary roles, configuring static IP addressing, promoting the server to a domain controller, and validating functionality through DNS resolution and directory management.
 
 The environment serves as a foundational exercise for **systems administrators and cybersecurity analysts** learning how identity and name resolution infrastructure functions within enterprise networks.  
