@@ -212,7 +212,7 @@ ADUC should display your domain (`rapidascent.local`), and DNS Manager should sh
 
 To confirm DNS and AD integration, open **PowerShell** and run the following commands:
 
-```powershell
+```PowerShell
 nslookup rapidascent.local
 ping rapidascent.local
 ```
